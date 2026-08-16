@@ -10,7 +10,7 @@ terraform {
 
 variable "litellm_api_key" {
   type        = string
-  description = "LiteLLM API key (from environment or GitHub secret)"
+  description = "LiteLLM API key"
   sensitive   = true
 }
 
@@ -55,20 +55,20 @@ variable "openclaw_workspace" {
 module "openclaw" {
   source = "./modules/openclaw"
 
-  litellm_api_key  = var.litellm_api_key
-  gateway_token    = var.gateway_token
-  discord_token    = var.discord_token
-  guild_id         = var.guild_id
-  channel_1        = var.channel_1
-  channel_2        = var.channel_2
-  channel_3        = var.channel_3
-  channel_4        = var.channel_4
-  channel_5        = var.channel_5
-  channel_6        = var.channel_6
-  channel_7        = var.channel_7
-  channel_8        = var.channel_8
-  openclaw_state_dir  = var.openclaw_state_dir
-  openclaw_workspace  = var.openclaw_workspace
+  litellm_api_key    = var.litellm_api_key
+  gateway_token      = var.gateway_token
+  discord_token      = var.discord_token
+  guild_id           = var.guild_id
+  channel_1          = var.channel_1
+  channel_2          = var.channel_2
+  channel_3          = var.channel_3
+  channel_4          = var.channel_4
+  channel_5          = var.channel_5
+  channel_6          = var.channel_6
+  channel_7          = var.channel_7
+  channel_8          = var.channel_8
+  openclaw_state_dir = var.openclaw_state_dir
+  openclaw_workspace = var.openclaw_workspace
 }
 
 output "openclaw_config_path" {
